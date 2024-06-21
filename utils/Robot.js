@@ -98,7 +98,7 @@ class Robot {
 							lastPrice,
 							lastData.lastPrice
 						);
-						if ((guesse === "UP" || priceRise < this.buyLimit) && lastData.euro > 0)
+						if ((guesse === "UP") && lastData.euro > 0)
 							this.buy(lastData.euro, lastPrice)
 								.then((data) => {
 									return resolve(data);
@@ -106,7 +106,7 @@ class Robot {
 								.catch((err) => {
 									return resolve(err);
 								});
-						if ((guesse === "DOWN" || priceRise > this.sellLimit) && lastData.coin > 0)
+						if ((guesse === "DOWN") && lastData.coin > 0)
 							this.sell(lastData.coin, lastPrice)
 								.then((data) => {
 									return resolve(data);
