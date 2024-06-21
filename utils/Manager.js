@@ -295,7 +295,7 @@ class Manager {
 				// }
 				// console.log("trues: " + compatibles.filter(t => t).length);
 				// console.log("falses: " + compatibles.filter(t => !t).length);
-				this.simulation({ prices, maxSimulation: 1400, windowSize: 2, n: 8, maxPriceUnit: 1000 });
+				this.simulation({ prices, maxSimulation: 1400, windowSize: 2, n: 5, maxPriceUnit: 1000 });
 			} catch (error) {
 				axios
 					.get(
