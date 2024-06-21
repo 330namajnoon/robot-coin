@@ -1,0 +1,22 @@
+{
+  "name": "robot-coin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.20.0",
+    "axios": "^1.7.2",
+    "brain.js": "^2.0.0-beta.23",
+    "child_process": "^1.0.2",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "sm-express-server": "^1.0.3"
+  }
+}
