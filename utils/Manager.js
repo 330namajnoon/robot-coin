@@ -167,7 +167,7 @@ class Manager {
 		return new Promise((resolve, reject) => {
 			axios
 				.get(
-					`https://min-api.cryptocompare.com/data/price?fsym=${this.coinName}&tsyms=${this.tsym}&api_key=${apiKey}`
+					`https://min-api.cryptocompare.com/data/price?fsym=${this.coinName}&tsyms=${this.tsym}&api_key=${this.apiKey}`
 				)
 				.then((res) => {
 					resolve(res.data.EUR);
@@ -185,7 +185,13 @@ class Manager {
 		});
 	};
 
-	simulation = async ({ prices = [100], maxSimulation, maxPriceUnit = 1000, windowSize = 5, n = 5 }) => {
+	simulation = async ({
+		prices = [100],
+		maxSimulation,
+		maxPriceUnit = 1000,
+		windowSize = 5,
+		n = 5,
+	}) => {
 		// try {
 		// 	console.log(await this.setTerminal("clear"));
 		// 	console.log(
@@ -244,6 +250,15 @@ class Manager {
 		});
 	};
 
+	appendData = (path, data) => {
+		return new Promise((resolve, reject) => {
+			fs.appendFile(path, data, (err) => {
+				if (err) return reject(err);
+				resolve(data);
+			})
+		})
+	}
+
 	getData = (path) => {
 		return new Promise((resolve, reject) => {
 			fs.readFile(path, (err, data) => {
@@ -253,20 +268,86 @@ class Manager {
 		});
 	};
 
+	getPrices = ({ limit = 10, timeType = "minute" }) => {
+		return new Promise((resolve, reject) => {
+			axios
+				.get(
+					`https://min-api.cryptocompare.com/data/v2/histo${timeType}?fsym=${this.coinName}&tsym=${this.tsym}&limit=${limit}&api_key=${this.apiKey}`
+				)
+				.then(async (data) => {
+					const prices = data.data.Data.Data.map((d) =>
+						d.close > d.open
+							? d.open + (d.close - d.open) / 2
+							: d.close + (d.open - d.close) / 2
+					);
+					let strData = "";
+					prices.forEach(p => {
+						strData += `${p}\n`;
+					});
+					try {
+						await this.appendData(
+							"./database/prices.txt",
+							strData
+						);
+					} catch (error) {
+						console.log(error);
+					}
+					return resolve(strData);
+				})
+				.catch((error) => {
+					return reject(error)
+				});
+		});
+	};
+
+	timeout = (time = 1000) => {
+		return new Promise((resolve) => {
+			setTimeout(() => {
+				resolve(time);
+			}, time);
+		})
+	}
+
 	update = async (config = null) => {
 		if (!config) {
 			try {
-				const lastPrice = await this.getLastPrice();
-				this.robots.forEach((r) => {
-					r.calculate(price).then((lastData) => {
-						r.logCallback(lastData);
+				let index = 0;
+				while (true) {
+					const lastPrice = await this.getLastPrice();
+					let prices = await this.getData("./database/prices.txt");
+					if (prices.length > 0)
+						prices = prices.split("\n").map(t => parseFloat(t));
+					if (index % 10 === 0) {
+						const priceNewData = await this.getPrices({ limit: prices.length > 1 ? 10 : 1000, timeType: "minute"});
+						if (prices.length === 0) {
+							prices = priceNewData.split("\n").map(t => parseFloat(t));
+						}
+						if (prices.length > 1010) {
+							let deletedData = "";
+							prices.slice(10, prices.length - 1).forEach(p => deletedData += `${p}\n`);
+							await this.saveData("./database/prices.txt", deletedData);
+						}
+					}
+					const guessedPrices = await this.predictNextNumbers(
+						prices.slice(0, prices.length - 1),
+						1,
+						10
+					);
+					this.robots.forEach((r) => {
+						r.calculate(lastPrice, guessedPrices).then((lastData) => {
+							r.logCallback(lastData);
+						});
 					});
-				});
-				setTimeout(() => {
-					this.update();
-				}, this.loopTime);
+					await this.updateTotalData(
+						this.robots.map((r) => r.lastDataPath),
+						lastPrice
+					);
+					await this.timeout(this.loopTime);
+					index++;
+				}
 			} catch (error) {
-				robots.forEach((r) => r.logCallback("Error!"));
+				console.log(error)
+				this.robots.forEach((r) => r.logCallback("Error!"));
 				setTimeout(() => {
 					this.update();
 				}, this.loopTime);
@@ -295,7 +376,13 @@ class Manager {
 				// }
 				// console.log("trues: " + compatibles.filter(t => t).length);
 				// console.log("falses: " + compatibles.filter(t => !t).length);
-				this.simulation({ prices, maxSimulation: 1400, windowSize: 2, n: 5, maxPriceUnit: 1000 });
+				this.simulation({
+					prices,
+					maxSimulation: 1400,
+					windowSize: 1,
+					n: 10,
+					maxPriceUnit: 1000,
+				});
 			} catch (error) {
 				axios
 					.get(
@@ -315,7 +402,10 @@ class Manager {
 						} catch (error) {
 							console.log(error);
 						}
-						this.simulation({prices: prices, maxSimulation: 1100});
+						this.simulation({
+							prices: prices,
+							maxSimulation: 1100,
+						});
 					})
 					.catch(() => {});
 			}
@@ -344,7 +434,7 @@ class Manager {
 		}
 		this.robots.forEach((r, i) => {
 			r.start((log) => {
-				//console.log(log);
+				console.log(log);
 			});
 
 			r.buyListener((data) => {

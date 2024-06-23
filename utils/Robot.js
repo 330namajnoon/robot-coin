@@ -45,7 +45,7 @@ class Robot {
 			fs.writeFile(this.lastDataPath, data, (err) => {
 				if (err) return reject();
 
-				fs.appendFile(this.logPath, data + "\n", (err) => {
+				fs.appendFile(this.logPath, `${data} ${new Date()}\n`, (err) => {
 					if (err) return reject();
 					return resolve();
 				});

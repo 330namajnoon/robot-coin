@@ -25,10 +25,7 @@ const manager = new Manager(config);
 
 manager.createRobots((robots) => {
 	console.log(robots);
-}).start({
-	limit: 1450,
-	timeType: "minute",
-}, true, false)
+}).start(null, false, false)
 
 
 
