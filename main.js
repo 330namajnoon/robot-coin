@@ -1,4 +1,7 @@
-const Manager = require("./utils/Manager.js");
+const { fstat } = require("fs");
+const fs = require("fs");
+const Manager = require("./modules/Manager.js");
+const calculateBollingerBands = require("./utils/calculateBollingerBands.js");
 require("dotenv").config();
 
 const managerConfig = {
@@ -27,4 +30,3 @@ manager
 			windowSize: 1,
 		}
 	});
-
