@@ -6,35 +6,31 @@ const tf = require("@tensorflow/tfjs");
 
 class Manager {
 	constructor({
-		robotsUnit = 10,
-		startPrice = 100,
-		endPrice = 200,
-		euroAvailable = 1000,
-		cryptoCoinsAvailable = 0,
-		sellLimit = -2,
-		buyLimit = 2,
-		loopTime = 1000,
-		databasePath = "./database/",
+		robotUnits = 1,
+		availableCash = 1000,
+		availableCriptos = 0,
+		sellLimit = 1,
+		buyLimit = 1,
+		intervalTime = 60000,
 		coinName = "SOL",
-		tsym = "EUR",
-		apiKey = "",
+		cashAmount = "EUR",
+		databasePath = "./database/",
+		apiKey = "2d779708c407542d3790b8ba4c6142656ab97ec6708187c255aa7928dc2a45cb",
 	}) {
-		this.robotsUnit = robotsUnit;
-		this.startPrice = startPrice;
-		this.endPrice = endPrice;
-		this.euroAvailable = euroAvailable;
-		this.cryptoCoinsAvailable = cryptoCoinsAvailable;
+		this.robotUnits = robotUnits;
+		this.availableCash = availableCash;
+		this.availableCriptos = availableCriptos;
 		this.sellLimit = sellLimit;
 		this.buyLimit = buyLimit;
-		this.loopTime = loopTime;
+		this.intervalTime = intervalTime;
 		this.databasePath = databasePath;
 		this.coinName = coinName;
-		this.tsym = tsym;
+		this.cashAmount = cashAmount;
 		this.apiKey = apiKey;
 		this.robots = [];
 	}
 
-	predictNextNumbers = async (prices, windowSize, n) => {
+	predictNextPrices = async (prices, windowSize, n) => {
 		const sequence = prices;
 
 		// Crear datos de entrenamiento
@@ -110,17 +106,11 @@ class Manager {
 	};
 
 	createRobots = (callback = (robots = [new Robot()]) => {}) => {
-		for (let index = 0; index < this.robotsUnit; index++) {
+		for (let index = 0; index < this.robotUnits; index++) {
 			const robot = new Robot(
 				`robot0${index}`,
-				this.startPrice +
-					((this.endPrice - this.startPrice) / this.robotsUnit) *
-						index,
-				this.startPrice +
-					((this.endPrice - this.startPrice) / this.robotsUnit) *
-						(index + 1),
-				this.euroAvailable / this.robotsUnit,
-				this.cryptoCoinsAvailable,
+				this.availableCash / this.robotUnits,
+				this.availableCriptos / this.robotUnits,
 				this.sellLimit,
 				this.buyLimit,
 				`${this.databasePath}robot0${index}_last_data.txt`,
@@ -308,41 +298,48 @@ class Manager {
 		})
 	}
 
-	update = async (config = null) => {
-		if (!config) {
+	strToArray = (str, splitValue = "\n", mapFunc = (value) => value) => {
+		if (str.length === 0)
+			return [];
+		return str.split(splitValue).map(value => mapFunc(value));
+	}
+
+	update = async ({ analysisConfig, simulationConfig = null}) => {
+		if (analysisConfig) {
 			try {
 				let index = 0;
 				while (true) {
 					const lastPrice = await this.getLastPrice();
-					let prices = await this.getData("./database/prices.txt");
-					if (prices.length > 0)
-						prices = prices.split("\n").map(t => parseFloat(t));
-					if (index % 10 === 0) {
-						const priceNewData = await this.getPrices({ limit: prices.length > 1 ? 10 : 1000, timeType: "minute"});
-						if (prices.length === 0) {
-							prices = priceNewData.split("\n").map(t => parseFloat(t));
-						}
-						if (prices.length > 1010) {
-							let deletedData = "";
-							prices.slice(10, prices.length - 1).forEach(p => deletedData += `${p}\n`);
-							await this.saveData("./database/prices.txt", deletedData);
-						}
-					}
-					const guessedPrices = await this.predictNextNumbers(
-						prices.slice(0, prices.length - 1),
-						1,
-						10
-					);
-					this.robots.forEach((r) => {
-						r.calculate(lastPrice, guessedPrices).then((lastData) => {
-							r.logCallback(lastData);
-						});
-					});
-					await this.updateTotalData(
-						this.robots.map((r) => r.lastDataPath),
-						lastPrice
-					);
-					await this.timeout(this.loopTime);
+					let prices = this.strToArray(await this.getData(`${this.databasePath}prices.txt`), "\n", (value) => parseFloat(value));
+					console.log(prices)
+					// if (prices.length > 0)
+					// 	prices = prices.split("\n").map(t => parseFloat(t));
+					// if (index % 10 === 0) {
+					// 	const priceNewData = await this.getPrices({ limit: prices.length > 1 ? 10 : 1000, timeType: "minute"});
+					// 	if (prices.length === 0) {
+					// 		prices = priceNewData.split("\n").map(t => parseFloat(t));
+					// 	}
+					// 	if (prices.length > 1010) {
+					// 		let deletedData = "";
+					// 		prices.slice(10, prices.length - 1).forEach(p => deletedData += `${p}\n`);
+					// 		await this.saveData("./database/prices.txt", deletedData);
+					// 	}
+					// }
+					// const guessedPrices = await this.predictNextNumbers(
+					// 	prices.slice(0, prices.length - 1),
+					// 	1,
+					// 	10
+					// );
+					// this.robots.forEach((r) => {
+					// 	r.calculate(lastPrice, guessedPrices).then((lastData) => {
+					// 		r.logCallback(lastData);
+					// 	});
+					// });
+					// await this.updateTotalData(
+					// 	this.robots.map((r) => r.lastDataPath),
+					// 	lastPrice
+					// );
+					// await this.timeout(this.loopTime);
 					index++;
 				}
 			} catch (error) {
@@ -352,7 +349,8 @@ class Manager {
 					this.update();
 				}, this.loopTime);
 			}
-		} else {
+		} 
+		if (simulationConfig && !analysisConfig) {
 			try {
 				const prices = JSON.parse(
 					await this.getData("./database/prices.json")
@@ -414,20 +412,22 @@ class Manager {
 
 	/**
 	 *
-	 * @param {{limit: number, timeType: keyof {minute: "minute"; hour: "hour", day: "day"}}} config
+	 * @param {{analysisConfig: {maxAnalysisLength: 1000, windowSize: 1, predictPricesCount: 10}, simulationConfig: {maxAnalysisLength: 1000, windowSize: 1, predictPricesCount: 10} | null, deleteData: boolean, deletePrices: boolean}} config
 	 */
-	start = async (config = null, deleteData = false, deletePrices = true) => {
+	start = async ({analysisConfig = {maxAnalysisLength: 1000, windowSize: 1, predictPricesCount: 10}, simulationConfig = null, deleteData = false, deletePrices = true}) => {
 		if (deleteData) {
 			for (let index = 0; index < this.robots.length; index++) {
 				try {
 					await fs.rmSync(this.robots[index].lastDataPath);
 					await fs.rmSync(this.robots[index].logPath);
-				} catch (error) {}
+				} catch (error) {
+					console.log(error);
+				}
 			}
 		}
 		if (deletePrices) {
 			try {
-				await fs.rmSync("./database/prices.json");
+				await fs.rmSync(`${this.databasePath}prices.txt`);
 			} catch (error) {
 				console.log(error);
 			}
@@ -438,14 +438,14 @@ class Manager {
 			});
 
 			r.buyListener((data) => {
-				//console.log("buy " + data);
+				console.log("buy " + data);
 			});
 
 			r.sellListener((data) => {
-				//console.log("sell " + data);
+				console.log("sell " + data);
 			});
 		});
-		this.update(config);
+		this.update({analysisConfig, simulationConfig});
 	};
 }
 

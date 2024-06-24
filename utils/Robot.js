@@ -4,20 +4,16 @@ const fs = require("fs");
 class Robot {
 	constructor(
 		name = "robot1",
-		buyStart = 100,
-		buyEnd = 130,
-		euroAvailable = 1000,
-		cryptoCoinsAvailable = 0,
+		availableCash = 1000,
+		availableCriptos = 0,
 		sellLimit = 2,
 		buyLimit = -2,
 		lastDataPath = "",
 		logPath = ""
 	) {
 		this.name = name;
-		this.buyStart = buyStart;
-		this.buyEnd = buyEnd;
-		this.euroAvailable = euroAvailable;
-		this.cryptoCoinsAvailable = cryptoCoinsAvailable;
+		this.availableCash = availableCash;
+		this.availableCriptos = availableCriptos;
 		this.sellLimit = sellLimit;
 		this.buyLimit = buyLimit;
 		this.lastDataPath = lastDataPath;

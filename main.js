@@ -1,36 +1,30 @@
-const Robot = require("./utils/Robot.js");
-const fs = require("fs");
-const axios = require("axios");
-const path = require("path");
 const Manager = require("./utils/Manager.js");
-
 require("dotenv").config();
 
+const managerConfig = {
+	robotUnits: 1,
+	availableCash: 1000,
+	availableCriptos: 0,
+	sellLimit: 1,
+	buyLimit: 1,
+	intervalTime: 60000,
+	coinName: "SOL",
+	cashAmount: "EUR",
+	databasePath: "./database/",
+	apiKey: "2d779708c407542d3790b8ba4c6142656ab97ec6708187c255aa7928dc2a45cb",
+};
 
-const config = {
-	robotsUnit: parseInt(process.env.ROBOTS_UNIT),
-	startPrice: parseInt(process.env.START_PRICE),
-	endPrice: parseInt(process.env.END_PRICE),
-	euroAvailable: parseFloat(process.env.EURO_AVAILABLE),
-	cryptoCoinsAvailable: parseFloat(process.env.CRYPTO_COINS_AVAILABLE),
-	sellLimit: parseFloat(process.env.SELL_LIMIT),
-	buyLimit: parseFloat(process.env.BUY_LIMIT),
-	loopTime: parseInt(process.env.LOOP_TIME),
-	coinName: process.env.COIN_NAME,
-	tsym: process.env.TSYM,
-	apiKey: process.env.API_KEY,
-}
+const manager = new Manager(managerConfig);
 
-const manager = new Manager(config);
-
-manager.createRobots((robots) => {
-	console.log(robots);
-}).start(null, false, false)
-
-
-
-
-
-
-
+manager
+	.createRobots((robots) => {
+		console.log(robots);
+	})
+	.start({
+		analysisConfig: {
+			maxAnalysisLength: 1000,
+			predictPricesCount: 10,
+			windowSize: 1,
+		}
+	});
 
