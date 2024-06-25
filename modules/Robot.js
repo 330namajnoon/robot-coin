@@ -1,5 +1,6 @@
 const axios = require("axios");
 const fs = require("fs");
+const calculateBollingerBands = require("../utils/calculateBollingerBands");
 
 class Robot {
 	constructor(
@@ -20,120 +21,93 @@ class Robot {
 		this.logPath = logPath;
 	}
 
-	getLastData = () => {
-		return new Promise((resolve, reject) => {
-			fs.readFile(this.lastDataPath, (err, data) => {
-				if (err) return reject();
-				if (data.toString() === "") return resolve(null);
-				const dataArray = data.toString().split(" ");
-				const response = {
-					euro: parseFloat(dataArray[0]),
-					coin: parseFloat(dataArray[1]),
-					lastPrice: parseFloat(dataArray[2]),
-				};
-				return resolve(response);
-			});
-		});
-	};
-
-	update = (data) => {
-		return new Promise((resolve, reject) => {
-			fs.writeFile(this.lastDataPath, data, (err) => {
-				if (err) return reject();
-
-				fs.appendFile(this.logPath, `${data} ${new Date()}\n`, (err) => {
-					if (err) return reject();
-					return resolve();
-				});
-			});
-		});
-	};
-
-	getPriceRice = (actualPrice, lastPrice) =>
-		((actualPrice - lastPrice) / lastPrice) * 100;
-
-	buy = async (euro, price) => {
-		this.euroAvailable = 0;
-		this.cryptoCoinsAvailable = (euro / price).toFixed(3);
-		const data = `${this.euroAvailable} ${this.cryptoCoinsAvailable} ${price}`;
-		try {
-			await this.update(data);
-			this.buyCallback?.(data);
-			return `Buy: ${data}`;
-		} catch (error) {
-			return "Error....";
-		}
+	buy = (cash, price) => {
+		const data = {
+			availableCash: 0,
+			availableCriptos: parseFloat((cash / price).toFixed(3)),
+		};
+		this.buyCallback?.(data);
+		return data;
 	};
 	sell = async (coin, price) => {
-		this.euroAvailable = (coin * price).toFixed(3);
-		this.cryptoCoinsAvailable = 0;
-		const data = `${this.euroAvailable} ${this.cryptoCoinsAvailable} ${price}`;
-		try {
-			await this.update(data);
-			this.sellCallback?.(data);
-			return `Sell: ${data}`;
-		} catch (error) {
-			return "Error....";
-		}
+		const data = {
+			availableCash: parseFloat((coin * price).toFixed(3)),
+			availableCriptos: 0,
+		};
+		this.sellCallback?.(data);
+		return data;
 	};
 
-	guessedPricesValidation = (guessedPrices = []) => {
-		return guessedPrices[guessedPrices.length - 1] > guessedPrices[0]
-			? "UP"
-			: "DOWN";
+	readFile = (path = "", parse = false) => {
+		return new Promise((resolve) => {
+			fs.readFile(path, (err, data) => {
+				if (err) return resolve(null);
+				resolve(parse ? JSON.parse(data.toString()) : data.toString());
+			});
+		});
 	};
 
-	calculate = (lastPrice = 0, guessedPrices = []) => {
-		return new Promise((resolve, reject) => {
-			const guesse = this.guessedPricesValidation(guessedPrices);
-			console.log(guesse);
-			this.getLastData()
-				.then((lastData) => {
-					if (lastData) {
-						const priceRise = this.getPriceRice(
-							lastPrice,
-							lastData.lastPrice
-						);
-						if ((guesse === "UP") && lastData.euro > 0)
-							this.buy(lastData.euro, lastPrice)
-								.then((data) => {
-									return resolve(data);
-								})
-								.catch((err) => {
-									return resolve(err);
-								});
-						if ((guesse === "DOWN") && lastData.coin > 0)
-							this.sell(lastData.coin, lastPrice)
-								.then((data) => {
-									return resolve(data);
-								})
-								.catch((err) => {
-									return resolve(err);
-								});
-					} else {
-						if (guesse === "UP" && this.euroAvailable > 0)
-							this.buy(this.euroAvailable, lastPrice)
-								.then((data) => {
-									return resolve(data);
-								})
-								.catch((err) => {
-									return resolve(err);
-								});
-					}
-					return resolve("Not change!!");
-				})
-				.catch(() => {
-					if (guesse === "UP" && this.euroAvailable > 0)
-						this.buy(this.euroAvailable, lastPrice)
-							.then((data) => {
-								return resolve(data);
-							})
-							.catch((err) => {
-								return resolve(err);
-							});
-					return resolve("Not change!!");
+	writeFile = (path = "", data, apend = false) => {
+		return new Promise((resolve) => {
+			if (apend)
+				fs.appendFile(path, data, (err) => {
+					if (err) return resolve(false);
+					return resolve(true);
+				});
+			else
+				fs.writeFile(path, data, (err) => {
+					if (err) return resolve(false);
+					return resolve(true);
 				});
 		});
+	};
+
+	tradingSignal = (prices, numDeviations = 2) => {
+		const { sma, upperBand, lowerBand } = calculateBollingerBands(prices, numDeviations);
+		const latestPrice = prices[prices.length - 1];
+		let signal = "hold";
+
+		if (latestPrice <= lowerBand) {
+			signal = "buy";
+		} else if (latestPrice >= upperBand) {
+			signal = "sell";
+		}
+
+		return { signal, sma, upperBand, lowerBand };
+	};
+
+	calculate = async (prices) => {
+		try {
+			const { signal, sma, upperBand, lowerBand } = this.tradingSignal(prices, 2);
+			const lastPrice = prices[prices.length - 1];
+			const { availableCash, availableCriptos } = (await this.readFile(this.lastDataPath, true)) || {
+				availableCash: this.availableCash,
+				availableCriptos: this.availableCriptos,
+			};
+			let buyData = {};
+			let sellData = {};
+
+			if (signal.includes("buy") && availableCash > 0) {
+				buyData = this.buy(availableCash, lastPrice);
+			} else if (signal.includes("sell") && availableCriptos) {
+				sellData = this.sell(availableCriptos, lastPrice);
+			}
+			const data = {
+				...{ ...{ availableCash, availableCriptos }, ...buyData, ...sellData },
+				price: lastPrice,
+				sma,
+				upperBand,
+				lowerBand,
+				buy: !!buyData?.availableCash,
+				sell: !!sellData?.availableCash,
+				date: new Date() + "",
+			};
+			await this.writeFile(this.lastDataPath, JSON.stringify(data));
+			await this.writeFile(this.logPath, `${JSON.stringify(data)}\n`, true);
+			return data;
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	start = (logCallback = () => {}) => {

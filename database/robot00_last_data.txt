@@ -1,1 +1,1 @@
-1010.548 0 125.69
+{"availableCash":0,"availableCriptos":7.83,"price":128.09,"sma":128.0490099009901,"upperBand":128.52989608748368,"lowerBand":127.5681237144965,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:08:20 GMT+0200 (Central European Summer Time)"}

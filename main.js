@@ -25,8 +25,16 @@ manager
 	})
 	.start({
 		analysisConfig: {
-			maxAnalysisLength: 1000,
-			predictPricesCount: 10,
-			windowSize: 1,
-		}
+			totalDataLimit: 100,
+			timeType: "minute",
+		},
+		// analysisConfig: null,
+		simulationConfig: {
+			totalDataLimit: 1400,
+			timeType: "minute",
+			analysisLength: 100,
+		},
+		deleteData: true,
+		deletePrices: true,
 	});
+

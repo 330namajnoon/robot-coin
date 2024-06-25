@@ -1,7 +1,10 @@
+import CanvasManager from "../CanvasManager";
+
 class Script {
-	ctx: CanvasRenderingContext2D;
-	constructor(ctx: CanvasRenderingContext2D) {
-		this.ctx = ctx;
+	manager: CanvasManager;
+
+	constructor(manager: CanvasManager) {
+		this.manager = manager;
         this?.initial();
 	}
 

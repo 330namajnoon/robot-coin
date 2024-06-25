@@ -1,118 +1,223 @@
-0 7.973 125.42
-999.894 0 125.41
-0 7.972 125.42
-999.769 0 125.41
-0 7.972 125.41
-999.689 0 125.4
-0 7.972 125.4
-999.689 0 125.4
-0 7.972 125.4
-999.689 0 125.4
-0 7.974 125.37
-999.700 0 125.37
-0 7.977 125.33
-999.837 0 125.34
-0 7.977 125.34
-1000.396 0 125.41
-0 7.980 125.37
-1000.373 0 125.36
-0 7.982 125.33
-1000.544 0 125.35
-0 7.982 125.35
-1000.464 0 125.34
-0 7.982 125.34
-1000.703 0 125.37
-0 7.982 125.37
-1000.703 0 125.37
-0 7.983 125.36
-1000.749 0 125.36
-0 7.983 125.36
-1000.749 0 125.36
-0 7.982 125.38
-1000.863 0 125.39
-0 7.982 125.39
-1000.863 0 125.39
-0 7.983 125.38
-1000.669 0 125.35
-0 7.982 125.36
-1000.624 0 125.36
-0 7.982 125.36
-1000.703 0 125.37
-0 7.983 125.36
-1000.749 0 125.36
-0 7.984 125.35
-1000.794 0 125.35
-0 7.984 125.35
-1000.715 0 125.34
-0 7.984 125.34
-1000.715 0 125.34
-0 7.985 125.33
-1000.760 0 125.33
-0 7.985 125.33
-1000.840 0 125.34
-0 7.985 125.34
-1000.840 0 125.34
-0 7.985 125.34
-1001.159 0 125.38
-0 7.985 125.38
-1001.399 0 125.41
-0 7.984 125.42
-1001.353 0 125.42
-0 7.984 125.42
-1001.593 0 125.45
-0 7.984 125.45
-1001.673 0 125.46
-0 7.984 125.46
-1001.673 0 125.46
-0 7.982 125.49
-1001.741 0 125.5
-0 7.982 125.5
-1001.741 0 125.5
-0 7.982 125.5
-1001.581 0 125.48
-0 7.982 125.48
-1001.581 0 125.48
-0 7.982 125.48
-1001.741 0 125.5
-0 7.983 125.49
-1001.707 0 125.48
-0 7.982 125.49
-1001.661 0 125.49
-0 7.982 125.49
-1001.581 0 125.48
-0 7.982 125.48
-1001.581 0 125.48
-0 7.983 125.47
-1001.467 0 125.45
-0 7.983 125.45
-1001.467 0 125.45
-0 7.983 125.45
-1001.467 0 125.45
-0 7.985 125.42
-1001.638 0 125.44
-0 7.985 125.44
-1001.638 0 125.44
-0 7.985 125.44
-1002.277 0 125.52
-0 7.985 125.52
-1002.597 0 125.56
-0 7.993 125.43
-1002.562 0 125.43
-0 7.991 125.46 Sun Jun 23 2024 00:11:35 GMT+0200 (Central European Summer Time)
-1003.350 0 125.56 Sun Jun 23 2024 00:36:59 GMT+0200 (Central European Summer Time)
-0 8.003 125.37 Sun Jun 23 2024 00:51:05 GMT+0200 (Central European Summer Time)
-1002.936 0 125.32 Sun Jun 23 2024 00:52:10 GMT+0200 (Central European Summer Time)
-0 8.001 125.35 Sun Jun 23 2024 01:09:33 GMT+0200 (Central European Summer Time)
-1002.605 0 125.31 Sun Jun 23 2024 01:19:17 GMT+0200 (Central European Summer Time)
-0 8.002 125.29 Sun Jun 23 2024 01:20:22 GMT+0200 (Central European Summer Time)
-1003.291 0 125.38 Sun Jun 23 2024 02:22:13 GMT+0200 (Central European Summer Time)
-0 8.001 125.4 Sun Jun 23 2024 02:23:18 GMT+0200 (Central European Summer Time)
-1005.326 0 125.65 Sun Jun 23 2024 02:30:54 GMT+0200 (Central European Summer Time)
-0 7.992 125.79 Sun Jun 23 2024 02:31:59 GMT+0200 (Central European Summer Time)
-1007.392 0 126.05 Sun Jun 23 2024 02:36:19 GMT+0200 (Central European Summer Time)
-0 8.028 125.49 Sun Jun 23 2024 03:19:48 GMT+0200 (Central European Summer Time)
-1010.003 0 125.81 Sun Jun 23 2024 03:41:30 GMT+0200 (Central European Summer Time)
-0 8.050 125.47 Sun Jun 23 2024 07:29:20 GMT+0200 (Central European Summer Time)
-1010.678 0 125.55 Sun Jun 23 2024 07:51:06 GMT+0200 (Central European Summer Time)
-0 8.040 125.71 Sun Jun 23 2024 09:18:04 GMT+0200 (Central European Summer Time)
-1010.548 0 125.69 Sun Jun 23 2024 09:19:09 GMT+0200 (Central European Summer Time)
+{"availableCash":1000,"availableCriptos":0,"price":128.35,"sma":126.34316831683165,"upperBand":128.7775278592426,"lowerBand":123.90880877442069,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:25:09 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.31,"sma":126.37980198019797,"upperBand":128.82008435340285,"lowerBand":123.93951960699309,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:26:10 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.37,"sma":126.41712871287125,"upperBand":128.8626999156763,"lowerBand":123.97155751006618,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:27:10 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.19,"sma":126.45366336633661,"upperBand":128.89382684531438,"lowerBand":124.01349988735885,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:28:10 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.09,"sma":126.48782178217819,"upperBand":128.92205714745157,"lowerBand":124.05358641690479,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:29:12 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.11,"sma":126.52118811881184,"upperBand":128.95106044097398,"lowerBand":124.0913157966497,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:30:12 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.02,"sma":126.55346534653461,"upperBand":128.97549695533093,"lowerBand":124.1314337377383,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:31:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.1,"sma":126.58633663366332,"upperBand":129.00130599414342,"lowerBand":124.17136727318322,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:32:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.12,"sma":126.62079207920789,"upperBand":129.02296878710985,"lowerBand":124.21861537130593,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:33:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.06,"sma":126.65425742574254,"upperBand":129.04147975883203,"lowerBand":124.26703509265306,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:34:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.03,"sma":126.68623762376235,"upperBand":129.05974295059775,"lowerBand":124.31273229692695,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:35:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":127.95,"sma":126.7168316831683,"upperBand":129.07499833251345,"lowerBand":124.35866503382314,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:36:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128,"sma":126.74772277227721,"upperBand":129.09052448198184,"lowerBand":124.40492106257257,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:37:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":127.87,"sma":126.77752475247526,"upperBand":129.10000619417812,"lowerBand":124.4550433107724,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:38:14 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":127.86,"sma":126.80574257425744,"upperBand":129.11082666075384,"lowerBand":124.50065848776102,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:39:14 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":127.9,"sma":126.83326732673267,"upperBand":129.12352064647726,"lowerBand":124.54301400698807,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:40:14 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.02,"sma":126.86227722772277,"upperBand":129.1376483865452,"lowerBand":124.58690606890033,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:41:14 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.22,"sma":126.89336633663366,"upperBand":129.15625203874362,"lowerBand":124.6304806345237,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:42:14 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.15,"sma":126.92316831683169,"upperBand":129.17214243841448,"lowerBand":124.6741941952489,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:43:14 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.2,"sma":126.95396039603965,"upperBand":129.1867991596366,"lowerBand":124.7211216324427,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:44:15 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.19,"sma":126.98465346534658,"upperBand":129.1993113216858,"lowerBand":124.76999560900737,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:45:15 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.41,"sma":127.01930693069312,"upperBand":129.21245604306893,"lowerBand":124.82615781831731,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:46:18 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.4,"sma":127.0524752475248,"upperBand":129.22673584735296,"lowerBand":124.87821464769664,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:47:18 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.62,"sma":127.08801980198027,"upperBand":129.2461837077057,"lowerBand":124.92985589625482,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:48:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.6,"sma":127.12455445544562,"upperBand":129.25879863450788,"lowerBand":124.99031027638334,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:49:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.62,"sma":127.16108910891097,"upperBand":129.26999695067886,"lowerBand":125.05218126714308,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:50:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.6,"sma":127.1958415841585,"upperBand":129.2826531030694,"lowerBand":125.1090300652476,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:51:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.79,"sma":127.23316831683178,"upperBand":129.29771665655983,"lowerBand":125.16861997710373,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:52:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.91,"sma":127.27128712871297,"upperBand":129.31600437584603,"lowerBand":125.22656988157989,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:53:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.2,"sma":127.30990099009911,"upperBand":129.35154950873778,"lowerBand":125.26825247146044,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:54:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.1,"sma":127.34752475247537,"upperBand":129.3796633731868,"lowerBand":125.31538613176396,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:55:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.63,"sma":127.38881188118822,"upperBand":129.43527086037514,"lowerBand":125.34235290200131,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:56:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.58,"sma":127.42900990099021,"upperBand":129.4865245123224,"lowerBand":125.371495289658,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:57:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.62,"sma":127.46861386138626,"upperBand":129.53926694572152,"lowerBand":125.39796077705101,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:58:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.56,"sma":127.50594059405952,"upperBand":129.59008569878878,"lowerBand":125.42179548933028,"buy":false,"sell":false,"date":"Tue Jun 25 2024 12:59:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.5,"sma":127.54178217821793,"upperBand":129.63732463458868,"lowerBand":125.44623972184719,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:00:21 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.31,"sma":127.5769306930694,"upperBand":129.67083839068474,"lowerBand":125.48302299545406,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:01:21 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.42,"sma":127.61455445544566,"upperBand":129.70301122569677,"lowerBand":125.52609768519454,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:02:21 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.25,"sma":127.65079207920803,"upperBand":129.7244356094326,"lowerBand":125.57714854898349,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:03:21 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.32,"sma":127.68722772277236,"upperBand":129.74754418180996,"lowerBand":125.62691126373477,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:04:21 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.46,"sma":127.72396039603969,"upperBand":129.77709049460793,"lowerBand":125.67083029747143,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:05:21 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.33,"sma":127.75980198019809,"upperBand":129.79737961440736,"lowerBand":125.72222434598882,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:06:22 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.22,"sma":127.79405940594066,"upperBand":129.81224833667562,"lowerBand":125.77587047520569,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:07:22 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.23,"sma":127.82623762376242,"upperBand":129.83130022911106,"lowerBand":125.82117501841377,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:08:22 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.16,"sma":127.85811881188123,"upperBand":129.84451155792988,"lowerBand":125.87172606583256,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:09:22 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129,"sma":127.88712871287133,"upperBand":129.85369950646287,"lowerBand":125.9205579192798,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:10:23 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.06,"sma":127.91752475247529,"upperBand":129.86062711203525,"lowerBand":125.97442239291533,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:11:23 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.12,"sma":127.94821782178222,"upperBand":129.8682557670335,"lowerBand":126.02817987653094,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:12:23 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.06,"sma":127.97673267326736,"upperBand":129.8763170132325,"lowerBand":126.07714833330225,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:13:23 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.01,"sma":128.00485148514855,"upperBand":129.88055463010807,"lowerBand":126.12914834018905,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:14:24 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.07,"sma":128.03267326732677,"upperBand":129.88726861128046,"lowerBand":126.17807792337308,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:15:24 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.06,"sma":128.06069306930695,"upperBand":129.8908524140457,"lowerBand":126.23053372456819,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:16:24 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.02,"sma":128.08623762376237,"upperBand":129.89711969423237,"lowerBand":126.27535555329239,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:17:24 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.93,"sma":128.11128712871292,"upperBand":129.89800747919378,"lowerBand":126.32456677823205,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:18:24 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.97,"sma":128.13693069306933,"upperBand":129.89767927953662,"lowerBand":126.37618210660203,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:19:24 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.92,"sma":128.1632673267327,"upperBand":129.89017977536312,"lowerBand":126.43635487810225,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:20:24 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.93,"sma":128.19029702970298,"upperBand":129.8784724591998,"lowerBand":126.50212160020615,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:21:25 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":129.01,"sma":128.2171287128713,"upperBand":129.87005132492993,"lowerBand":126.56420610081265,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:22:25 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.94,"sma":128.24326732673268,"upperBand":129.85713080240404,"lowerBand":126.62940385106131,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:23:25 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.89,"sma":128.26891089108912,"upperBand":129.84019503764839,"lowerBand":126.69762674452984,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:24:25 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.8,"sma":128.29306930693068,"upperBand":129.82063448941122,"lowerBand":126.76550412445015,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:25:25 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.78,"sma":128.31693069306928,"upperBand":129.79818181684178,"lowerBand":126.83567956929679,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:26:26 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.68,"sma":128.33920792079206,"upperBand":129.77319891229425,"lowerBand":126.90521692928988,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:27:27 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.64,"sma":128.3607920792079,"upperBand":129.74578000328813,"lowerBand":126.97580415512768,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:28:27 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.66,"sma":128.3826732673267,"upperBand":129.71504817692073,"lowerBand":127.05029835773267,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:29:27 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.54,"sma":128.40346534653463,"upperBand":129.67822390847337,"lowerBand":127.12870678459588,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:30:27 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.77,"sma":128.42118811881184,"upperBand":129.66570651428177,"lowerBand":127.1766697233419,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:31:28 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.65,"sma":128.4377227722772,"upperBand":129.6491465518718,"lowerBand":127.22629899268259,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:32:28 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.71,"sma":128.4466336633663,"upperBand":129.65268532548725,"lowerBand":127.24058200124534,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:33:28 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.69,"sma":128.4535643564356,"upperBand":129.65708257904208,"lowerBand":127.25004613382913,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:34:28 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.57,"sma":128.4604950495049,"upperBand":129.65854090471626,"lowerBand":127.26244919429357,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:35:28 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.59,"sma":128.46841584158412,"upperBand":129.659181408367,"lowerBand":127.27765027480123,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:36:28 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.52,"sma":128.4726732673267,"upperBand":129.6610689446389,"lowerBand":127.28427759001451,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:37:31 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.52,"sma":128.47772277227722,"upperBand":129.66254052970734,"lowerBand":127.29290501484711,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:38:31 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.43,"sma":128.48326732673266,"upperBand":129.66188241908802,"lowerBand":127.30465223437729,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:39:31 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.42,"sma":128.49,"upperBand":129.65928682673172,"lowerBand":127.3207131732683,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:40:32 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.63,"sma":128.50069306930692,"upperBand":129.65505717757662,"lowerBand":127.3463289610372,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:41:32 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.65,"sma":128.5118811881188,"upperBand":129.6497956009204,"lowerBand":127.37396677531716,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:42:32 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.46,"sma":128.52009900990097,"upperBand":129.6443254591998,"lowerBand":127.39587256060217,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:43:33 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.32,"sma":128.52841584158412,"upperBand":129.6340153883496,"lowerBand":127.42281629481863,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:44:34 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.09,"sma":128.53504950495048,"upperBand":129.6218474131042,"lowerBand":127.44825159679674,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:45:34 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.21,"sma":128.54297029702968,"upperBand":129.60830358120506,"lowerBand":127.47763701285429,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:46:34 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.15,"sma":128.54891089108906,"upperBand":129.59860637164604,"lowerBand":127.49921541053207,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:47:34 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.25,"sma":128.55425742574255,"upperBand":129.59224232246265,"lowerBand":127.51627252902244,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:48:34 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.18,"sma":128.55722772277224,"upperBand":129.58917721425203,"lowerBand":127.52527823129245,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:49:34 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.07,"sma":128.55990099009898,"upperBand":129.5853687463956,"lowerBand":127.53443323380237,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:50:35 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.28,"sma":128.5658415841584,"upperBand":129.57771277435913,"lowerBand":127.55397039395764,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:51:35 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.48,"sma":128.5725742574257,"upperBand":129.57295697019256,"lowerBand":127.57219154465888,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:52:35 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.64,"sma":128.58118811881187,"upperBand":129.56867933798813,"lowerBand":127.59369689963562,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:53:35 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.65,"sma":128.59009900990097,"upperBand":129.5635708818832,"lowerBand":127.61662713791871,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:54:35 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.68,"sma":128.59881188118808,"upperBand":129.55951000658868,"lowerBand":127.63811375578749,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:55:36 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.74,"sma":128.60861386138612,"upperBand":129.55455895305855,"lowerBand":127.66266876971369,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:56:36 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.81,"sma":128.61801980198018,"upperBand":129.55282965632387,"lowerBand":127.6832099476365,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:57:37 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.8,"sma":128.62871287128712,"upperBand":129.54674634148668,"lowerBand":127.71067940108757,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:58:37 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.85,"sma":128.63950495049502,"upperBand":129.54193018115498,"lowerBand":127.73707971983507,"buy":false,"sell":false,"date":"Tue Jun 25 2024 13:59:37 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.71,"sma":128.64633663366334,"upperBand":129.54030641086652,"lowerBand":127.75236685646017,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:00:38 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.71,"sma":128.64980198019796,"upperBand":129.54201684664275,"lowerBand":127.75758711375317,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:01:38 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.6,"sma":128.65108910891087,"upperBand":129.54263754938046,"lowerBand":127.75954066844128,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:02:38 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.51,"sma":128.65386138613857,"upperBand":129.54188943982544,"lowerBand":127.7658333324517,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:03:38 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.51,"sma":128.65613861386134,"upperBand":129.54149571157475,"lowerBand":127.77078151614793,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:04:38 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.73,"sma":128.659603960396,"upperBand":129.5433490102857,"lowerBand":127.77585891050627,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:05:38 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.87,"sma":128.66475247524752,"upperBand":129.5472807697342,"lowerBand":127.78222418076085,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:06:39 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.79,"sma":128.66950495049505,"upperBand":129.54950664373206,"lowerBand":127.78950325725805,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:07:39 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.19,"sma":128.66772277227722,"upperBand":129.55086693569066,"lowerBand":127.78457860886377,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:08:39 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.14,"sma":128.66722772277225,"upperBand":129.55149782537185,"lowerBand":127.78295762017264,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:09:40 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.28,"sma":128.66910891089108,"upperBand":129.54925785872632,"lowerBand":127.78895996305586,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:10:40 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.31,"sma":128.67108910891088,"upperBand":129.5470876666659,"lowerBand":127.79509055115584,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:11:40 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.32,"sma":128.67405940594057,"upperBand":129.54321480895928,"lowerBand":127.80490400292186,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:12:40 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.11,"sma":128.67415841584156,"upperBand":129.54305445983144,"lowerBand":127.80526237185168,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:13:41 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.02,"sma":128.67316831683166,"upperBand":129.54481149340785,"lowerBand":127.80152514025548,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:14:41 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.06,"sma":128.67316831683166,"upperBand":129.54481149340785,"lowerBand":127.80152514025548,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:15:41 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.22,"sma":128.67504950495047,"upperBand":129.5419393537773,"lowerBand":127.80815965612362,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:16:42 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.15,"sma":128.67702970297026,"upperBand":129.53818041621759,"lowerBand":127.81587898972293,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:17:42 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.16,"sma":128.6786138613861,"upperBand":129.5353543096358,"lowerBand":127.82187341313642,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:18:42 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.18,"sma":128.68168316831682,"upperBand":129.52898322180965,"lowerBand":127.83438311482399,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:19:42 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.22,"sma":128.68524752475247,"upperBand":129.5216499768392,"lowerBand":127.84884507266575,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:20:43 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.27,"sma":128.6889108910891,"upperBand":129.51469776930793,"lowerBand":127.86312401287027,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:21:43 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.33,"sma":128.6919801980198,"upperBand":129.5100678972184,"lowerBand":127.8738924988212,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:22:44 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.36,"sma":128.69336633663366,"upperBand":129.5087203676307,"lowerBand":127.8780123056366,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:23:44 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.43,"sma":128.6961386138614,"upperBand":129.50596915619923,"lowerBand":127.88630807152354,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:24:44 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.57,"sma":128.69980198019803,"upperBand":129.50394954656826,"lowerBand":127.8956544138278,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:25:44 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.41,"sma":128.7019801980198,"upperBand":129.5017723482564,"lowerBand":127.90218804778324,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:26:44 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.38,"sma":128.70168316831683,"upperBand":129.50193099778576,"lowerBand":127.90143533884789,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:27:44 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.32,"sma":128.7008910891089,"upperBand":129.50248899334667,"lowerBand":127.8992931848711,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:28:44 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.26,"sma":128.69732673267325,"upperBand":129.50352004211643,"lowerBand":127.89113342323006,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:29:45 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.32,"sma":128.6945544554455,"upperBand":129.50398659841923,"lowerBand":127.88512231247181,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:30:45 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.41,"sma":128.69247524752473,"upperBand":129.5037395386312,"lowerBand":127.88121095641824,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:31:45 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.39,"sma":128.6903960396039,"upperBand":129.50367163520033,"lowerBand":127.87712044400749,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:32:45 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.36,"sma":128.68613861386137,"upperBand":129.50178253877817,"lowerBand":127.87049468894456,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:33:45 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.4,"sma":128.68108910891087,"upperBand":129.49744129940922,"lowerBand":127.8647369184125,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:34:46 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.34,"sma":128.67257425742574,"upperBand":129.48503003091986,"lowerBand":127.86011848393161,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:35:46 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.41,"sma":128.6657425742574,"upperBand":129.4753059404239,"lowerBand":127.8561792080909,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:36:46 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.36,"sma":128.65316831683168,"upperBand":129.44160921822797,"lowerBand":127.86472741543538,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:37:46 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.38,"sma":128.6412871287129,"upperBand":129.40940770178906,"lowerBand":127.87316655563671,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:38:47 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.26,"sma":128.62782178217822,"upperBand":129.37421696835221,"lowerBand":127.8814265960042,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:39:47 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.23,"sma":128.61465346534652,"upperBand":129.3414724636457,"lowerBand":127.88783446704736,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:40:47 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.3,"sma":128.6027722772277,"upperBand":129.31028846708202,"lowerBand":127.89525608737337,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:41:47 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.35,"sma":128.59326732673264,"upperBand":129.28820579632682,"lowerBand":127.89832885713845,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:42:47 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.39,"sma":128.58306930693067,"upperBand":129.25915438315343,"lowerBand":127.90698423070789,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:43:47 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.35,"sma":128.57415841584157,"upperBand":129.23846937324973,"lowerBand":127.90984745843342,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:44:47 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.39,"sma":128.56495049504946,"upperBand":129.21324222599694,"lowerBand":127.916658764102,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:45:48 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.34,"sma":128.55386138613858,"upperBand":129.17841489982786,"lowerBand":127.9293078724493,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:46:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.22,"sma":128.54287128712866,"upperBand":129.15126366073852,"lowerBand":127.9344789135188,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:47:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.17,"sma":128.5324752475247,"upperBand":129.13001744747177,"lowerBand":127.93493304757764,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:48:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.15,"sma":128.52178217821776,"upperBand":129.1075499897494,"lowerBand":127.93601436668612,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:49:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":128.16,"sma":128.51188118811876,"upperBand":129.0878880147511,"lowerBand":127.93587436148646,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:50:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":1000,"availableCriptos":0,"price":127.94,"sma":128.5013861386138,"upperBand":129.0800567195246,"lowerBand":127.92271555770301,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:51:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.72,"sma":128.48811881188115,"upperBand":129.07631769298598,"lowerBand":127.89991993077632,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:52:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.74,"sma":128.47445544554452,"upperBand":129.06740060519812,"lowerBand":127.88151028589093,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:53:49 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.74,"sma":128.46138613861382,"upperBand":129.06028962314693,"lowerBand":127.86248265408071,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:54:50 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.61,"sma":128.44752475247523,"upperBand":129.05965562530395,"lowerBand":127.83539387964652,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:55:50 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.7,"sma":128.4339603960396,"upperBand":129.0510123408846,"lowerBand":127.81690845119459,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:56:50 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.7,"sma":128.42049504950495,"upperBand":129.04165574035906,"lowerBand":127.79933435865082,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:57:53 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.72,"sma":128.40762376237623,"upperBand":129.03242566216448,"lowerBand":127.78282186258797,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:58:54 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.66,"sma":128.3950495049505,"upperBand":129.02835373486118,"lowerBand":127.7617452750398,"buy":false,"sell":false,"date":"Tue Jun 25 2024 14:59:54 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.7,"sma":128.38247524752475,"upperBand":129.02003498848384,"lowerBand":127.74491550656565,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:00:54 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.74,"sma":128.37079207920792,"upperBand":129.0117609199471,"lowerBand":127.72982323846873,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:01:54 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.91,"sma":128.36069306930693,"upperBand":128.99823325200944,"lowerBand":127.72315288660444,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:02:54 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.83,"sma":128.3490099009901,"upperBand":128.98175657703314,"lowerBand":127.71626322494706,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:03:54 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.81,"sma":128.3378217821782,"upperBand":128.96833063818903,"lowerBand":127.70731292616736,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:04:54 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.76,"sma":128.32663366336632,"upperBand":128.95765532264357,"lowerBand":127.69561200408907,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:05:56 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.82,"sma":128.31693069306928,"upperBand":128.94867661626884,"lowerBand":127.68518476986972,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:06:57 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.01,"sma":128.30930693069305,"upperBand":128.93708791934185,"lowerBand":127.68152594204426,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:07:58 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.95,"sma":128.3020792079208,"upperBand":128.92943144262597,"lowerBand":127.67472697321563,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:08:58 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.03,"sma":128.2960396039604,"upperBand":128.9220062889811,"lowerBand":127.6700729189397,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:09:58 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.18,"sma":128.29128712871287,"upperBand":128.9134052822505,"lowerBand":127.66916897517523,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:10:58 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.1,"sma":128.2869306930693,"upperBand":128.9081829740533,"lowerBand":127.66567841208534,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:11:59 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.1,"sma":128.28029702970298,"upperBand":128.89504936940787,"lowerBand":127.66554468999809,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:12:59 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.23,"sma":128.27613861386138,"upperBand":128.88649783480454,"lowerBand":127.66577939291822,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:14:00 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.25,"sma":128.27158415841583,"upperBand":128.87575928661198,"lowerBand":127.66740903021969,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:15:00 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.19,"sma":128.26663366336635,"upperBand":128.8651815909425,"lowerBand":127.66808573579019,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:16:00 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.18,"sma":128.26277227722773,"upperBand":128.858467187591,"lowerBand":127.66707736686443,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:17:01 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.18,"sma":128.25871287128714,"upperBand":128.85101105259022,"lowerBand":127.66641468998405,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:18:01 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.27,"sma":128.25623762376242,"upperBand":128.84623243149355,"lowerBand":127.66624281603129,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:19:02 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.35,"sma":128.25455445544557,"upperBand":128.8424961562833,"lowerBand":127.66661275460784,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:20:03 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.21,"sma":128.25237623762376,"upperBand":128.83933111479953,"lowerBand":127.66542136044801,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:21:04 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.14,"sma":128.24960396039606,"upperBand":128.8360105087371,"lowerBand":127.66319741205501,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:22:04 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.12,"sma":128.24455445544558,"upperBand":128.82653825810186,"lowerBand":127.6625706527893,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:23:04 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.22,"sma":128.24029702970302,"upperBand":128.81661827844098,"lowerBand":127.66397578096505,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:24:04 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.24,"sma":128.23811881188124,"upperBand":128.81276265592322,"lowerBand":127.66347496783925,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:25:05 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.26,"sma":128.23752475247528,"upperBand":128.81195279131626,"lowerBand":127.6630967136343,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:26:05 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.18,"sma":128.23841584158419,"upperBand":128.81220458853284,"lowerBand":127.66462709463555,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:27:05 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.17,"sma":128.23801980198024,"upperBand":128.8119416568187,"lowerBand":127.66409794714177,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:28:05 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.19,"sma":128.23841584158419,"upperBand":128.8121493683963,"lowerBand":127.66468231477208,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:29:05 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.32,"sma":128.23910891089113,"upperBand":128.81306581416098,"lowerBand":127.6651520076213,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:30:07 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.12,"sma":128.23851485148518,"upperBand":128.81283932691534,"lowerBand":127.66419037605502,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:31:08 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.99,"sma":128.23772277227727,"upperBand":128.813194210098,"lowerBand":127.66225133445653,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:32:08 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128,"sma":128.23495049504953,"upperBand":128.81227531747888,"lowerBand":127.65762567262018,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:33:10 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.01,"sma":128.230297029703,"upperBand":128.80722268474864,"lowerBand":127.65337137465734,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:34:10 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.9,"sma":128.22297029702972,"upperBand":128.79768878725392,"lowerBand":127.64825180680552,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:35:10 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.61,"sma":128.21267326732678,"upperBand":128.79365155521958,"lowerBand":127.63169497943399,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:36:10 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.72,"sma":128.2031683168317,"upperBand":128.78466471827852,"lowerBand":127.62167191538488,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:37:11 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.61,"sma":128.19198019801982,"upperBand":128.77521134661268,"lowerBand":127.60874904942696,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:38:11 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.66,"sma":128.18059405940596,"upperBand":128.76000873013058,"lowerBand":127.60117938868135,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:39:11 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.61,"sma":128.16881188118813,"upperBand":128.74575697443657,"lowerBand":127.59186678793968,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:40:11 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.57,"sma":128.15613861386143,"upperBand":128.72889274041262,"lowerBand":127.58338448731024,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:41:12 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.9,"sma":128.1481188118812,"upperBand":128.7122458453334,"lowerBand":127.58399177842901,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:42:12 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.77,"sma":128.13881188118813,"upperBand":128.69653204331007,"lowerBand":127.5810917190662,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:43:12 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.78,"sma":128.13069306930697,"upperBand":128.68518691521908,"lowerBand":127.57619922339487,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:44:12 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.77,"sma":128.12336633663372,"upperBand":128.67717423289574,"lowerBand":127.56955844037171,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:45:12 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.93,"sma":128.1176237623763,"upperBand":128.66728899633654,"lowerBand":127.56795852841606,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:46:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.01,"sma":128.110495049505,"upperBand":128.64671856014894,"lowerBand":127.57427153886105,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:47:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.09,"sma":128.10277227722776,"upperBand":128.61703706098888,"lowerBand":127.58850749346662,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:48:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.05,"sma":128.09544554455448,"upperBand":128.5910861421651,"lowerBand":127.59980494694386,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:49:13 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.98,"sma":128.0933663366337,"upperBand":128.58916474047268,"lowerBand":127.5975679327947,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:50:15 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.12,"sma":128.09316831683174,"upperBand":128.58890803369513,"lowerBand":127.59742859996834,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:51:16 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.3,"sma":128.0933663366337,"upperBand":128.58942028792913,"lowerBand":127.59731238533824,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:52:16 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.32,"sma":128.09346534653469,"upperBand":128.58969617467872,"lowerBand":127.59723451839065,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:53:16 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.19,"sma":128.09217821782178,"upperBand":128.58672354524327,"lowerBand":127.59763289040029,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:54:16 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128,"sma":128.0910891089109,"upperBand":128.5859570360067,"lowerBand":127.59622118181508,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:55:17 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.81,"sma":128.0890099009901,"upperBand":128.586811045832,"lowerBand":127.5912087561482,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:56:17 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.79,"sma":128.08633663366336,"upperBand":128.58761991969007,"lowerBand":127.58505334763667,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:57:17 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.88,"sma":128.0829702970297,"upperBand":128.58518357312738,"lowerBand":127.58075702093203,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:58:17 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.83,"sma":128.07980198019803,"upperBand":128.58431609954255,"lowerBand":127.5752878608535,"buy":false,"sell":false,"date":"Tue Jun 25 2024 15:59:17 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.81,"sma":128.0763366336634,"upperBand":128.58340135913738,"lowerBand":127.5692719081894,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:00:18 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.06,"sma":128.0751485148515,"upperBand":128.58179826682942,"lowerBand":127.56849876287356,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:01:18 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.08,"sma":128.07376237623765,"upperBand":128.57958472586972,"lowerBand":127.56794002660557,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:02:18 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.05,"sma":128.07158415841585,"upperBand":128.57590004773908,"lowerBand":127.5672682690926,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:03:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.84,"sma":128.06673267326735,"upperBand":128.57043861381374,"lowerBand":127.56302673272097,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:04:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.92,"sma":128.06237623762377,"upperBand":128.563465336753,"lowerBand":127.56128713849454,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:05:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":127.89,"sma":128.0570297029703,"upperBand":128.55381975209224,"lowerBand":127.56023965384837,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:06:19 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.08,"sma":128.0521782178218,"upperBand":128.53829114085895,"lowerBand":127.56606529478464,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:07:20 GMT+0200 (Central European Summer Time)"}
+{"availableCash":0,"availableCriptos":7.83,"price":128.09,"sma":128.0490099009901,"upperBand":128.52989608748368,"lowerBand":127.5681237144965,"buy":false,"sell":false,"date":"Tue Jun 25 2024 16:08:20 GMT+0200 (Central European Summer Time)"}

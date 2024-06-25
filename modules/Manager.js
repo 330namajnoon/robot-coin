@@ -58,19 +58,11 @@ class Manager {
 		const { inputs, outputs } = createTrainingData(sequence, windowSize);
 		const min = Math.min(...sequence);
 		const max = Math.max(...sequence);
-		const normalizedInputs = inputs.map((input) =>
-			normalizeData(input, min, max)
-		);
+		const normalizedInputs = inputs.map((input) => normalizeData(input, min, max));
 		const normalizedOutputs = normalizeData(outputs, min, max);
 
-		const inputTensor = tf.tensor2d(normalizedInputs, [
-			inputs.length,
-			windowSize,
-		]);
-		const outputTensor = tf.tensor2d(normalizedOutputs, [
-			outputs.length,
-			1,
-		]);
+		const inputTensor = tf.tensor2d(normalizedInputs, [inputs.length, windowSize]);
+		const outputTensor = tf.tensor2d(normalizedOutputs, [outputs.length, 1]);
 
 		// Crear y entrenar el modelo
 		const model = tf.sequential();
@@ -93,11 +85,7 @@ class Manager {
 			const normalizedInput = normalizeData(input, min, max);
 			const inputTensor = tf.tensor2d([normalizedInput], [1, windowSize]);
 			const prediction = model.predict(inputTensor).dataSync()[0];
-			const denormalizedPrediction = denormalizeData(
-				[prediction],
-				min,
-				max
-			)[0];
+			const denormalizedPrediction = denormalizeData([prediction], min, max)[0];
 			predictions.push(denormalizedPrediction);
 			input = input.slice(1).concat(denormalizedPrediction);
 		}
@@ -124,33 +112,22 @@ class Manager {
 
 	updateTotalData = async (allLastDatas = [""], lastPrice = 100) => {
 		const total = {
-			euro: 0,
-			coin: 0,
+			cash: 0,
+			cripto: 0,
 		};
 		let workingRobotsLenght = 0;
 		for (let i = 0; i < allLastDatas.length; i++) {
 			try {
-				let data = await fs.readFileSync(allLastDatas[i]);
+				let data = await this.readFile(allLastDatas[i], true);
+				console.log(data);
+				total.cripto = data.availableCriptos;
+				total.cash = data.availableCash > 0 ? data.availableCash : data.availableCriptos * data.price;
+				await this.saveData("./database/total.json", JSON.stringify(total));
 				workingRobotsLenght++;
-				let array = data.toString().split(" ");
-				total.euro +=
-					parseFloat(array[0]) + parseFloat(array[1]) * lastPrice;
-				total.coin += parseFloat(array[1]);
-			} catch (error) {}
+			} catch (error) {
+				console.log(error);
+			}
 		}
-		try {
-			await fs.writeFileSync(
-				"./database/total.json",
-				JSON.stringify({
-					euro: (
-						total.euro +
-						(this.robots.length - workingRobotsLenght) *
-							(this.euroAvailable / this.robots.length)
-					).toFixed(3),
-					coin: total.coin.toFixed(3),
-				})
-			);
-		} catch (error) {}
 	};
 
 	getLastPrice = () => {
@@ -175,13 +152,7 @@ class Manager {
 		});
 	};
 
-	simulation = async ({
-		prices = [100],
-		maxSimulation,
-		maxPriceUnit = 1000,
-		windowSize = 5,
-		n = 5,
-	}) => {
+	simulation = async ({ prices = [100], maxSimulation, maxPriceUnit = 1000, windowSize = 5, n = 5 }) => {
 		// try {
 		// 	console.log(await this.setTerminal("clear"));
 		// 	console.log(
@@ -206,16 +177,9 @@ class Manager {
 			let guessedPrices = [];
 			for (let nni = maxPriceUnit; nni < maxS; nni++) {
 				if (nni % 5 === 0 || !guessedPrices.length)
-					guessedPrices = await this.predictNextNumbers(
-						prices.slice(nni, maxPriceUnit + nni),
-						windowSize,
-						n
-					);
+					guessedPrices = await this.predictNextNumbers(prices.slice(nni, maxPriceUnit + nni), windowSize, n);
 				for (let i = 0; i < this.robots.length; i++) {
-					const lastData = await this.robots[i].calculate(
-						prices[nni],
-						guessedPrices
-					);
+					const lastData = await this.robots[i].calculate(prices[nni], guessedPrices);
 					this.robots[i].logCallback(lastData);
 				}
 				//console.log(guessedPrices)
@@ -223,8 +187,8 @@ class Manager {
 					this.robots.map((r) => r.lastDataPath),
 					prices[nni]
 				);
-				let data = await this.getData("./database/total.json");
-				console.log(JSON.parse(data.toString()));
+				let data = await this.readFile("./database/total.json", true);
+				console.log(data);
 			}
 		} catch (error) {
 			console.log(error);
@@ -245,15 +209,15 @@ class Manager {
 			fs.appendFile(path, data, (err) => {
 				if (err) return reject(err);
 				resolve(data);
-			})
-		})
-	}
+			});
+		});
+	};
 
-	getData = (path) => {
-		return new Promise((resolve, reject) => {
+	readFile = (path = "", parse = false) => {
+		return new Promise((resolve) => {
 			fs.readFile(path, (err, data) => {
-				if (err) return reject();
-				resolve(data.toString());
+				if (err) return resolve(null);
+				resolve(parse ? JSON.parse(data.toString()) : data.toString());
 			});
 		});
 	};
@@ -262,30 +226,24 @@ class Manager {
 		return new Promise((resolve, reject) => {
 			axios
 				.get(
-					`https://min-api.cryptocompare.com/data/v2/histo${timeType}?fsym=${this.coinName}&tsym=${this.tsym}&limit=${limit}&api_key=${this.apiKey}`
+					`https://min-api.cryptocompare.com/data/v2/histo${timeType}?fsym=${this.coinName}&tsym=${this.cashAmount}&limit=${limit}&api_key=${this.apiKey}`
 				)
 				.then(async (data) => {
-					const prices = data.data.Data.Data.map((d) =>
-						d.close > d.open
-							? d.open + (d.close - d.open) / 2
-							: d.close + (d.open - d.close) / 2
-					);
+					const prices = data.data.Data.Data.map((d) => d.close);
 					let strData = "";
-					prices.forEach(p => {
+					prices.forEach((p) => {
 						strData += `${p}\n`;
 					});
+					if (limit <= 1) strData = prices[0] + "\n";
 					try {
-						await this.appendData(
-							"./database/prices.txt",
-							strData
-						);
+						await this.appendData("./database/prices.txt", strData);
 					} catch (error) {
 						console.log(error);
 					}
-					return resolve(strData);
+					return resolve(strData.slice(0, strData.length - 1));
 				})
 				.catch((error) => {
-					return reject(error)
+					return reject(error);
 				});
 		});
 	};
@@ -295,117 +253,82 @@ class Manager {
 			setTimeout(() => {
 				resolve(time);
 			}, time);
-		})
-	}
+		});
+	};
 
 	strToArray = (str, splitValue = "\n", mapFunc = (value) => value) => {
-		if (str.length === 0)
-			return [];
-		return str.split(splitValue).map(value => mapFunc(value));
-	}
+		if (str.length === 0) return [];
+		return str.split(splitValue).map((value) => mapFunc(value));
+	};
 
-	update = async ({ analysisConfig, simulationConfig = null}) => {
+	analysis = async ({ analysisConfig, simulationConfig = null }) => {
 		if (analysisConfig) {
-			try {
-				let index = 0;
-				while (true) {
-					const lastPrice = await this.getLastPrice();
-					let prices = this.strToArray(await this.getData(`${this.databasePath}prices.txt`), "\n", (value) => parseFloat(value));
-					console.log(prices)
-					// if (prices.length > 0)
-					// 	prices = prices.split("\n").map(t => parseFloat(t));
-					// if (index % 10 === 0) {
-					// 	const priceNewData = await this.getPrices({ limit: prices.length > 1 ? 10 : 1000, timeType: "minute"});
-					// 	if (prices.length === 0) {
-					// 		prices = priceNewData.split("\n").map(t => parseFloat(t));
-					// 	}
-					// 	if (prices.length > 1010) {
-					// 		let deletedData = "";
-					// 		prices.slice(10, prices.length - 1).forEach(p => deletedData += `${p}\n`);
-					// 		await this.saveData("./database/prices.txt", deletedData);
-					// 	}
-					// }
-					// const guessedPrices = await this.predictNextNumbers(
-					// 	prices.slice(0, prices.length - 1),
-					// 	1,
-					// 	10
-					// );
-					// this.robots.forEach((r) => {
-					// 	r.calculate(lastPrice, guessedPrices).then((lastData) => {
-					// 		r.logCallback(lastData);
-					// 	});
-					// });
-					// await this.updateTotalData(
-					// 	this.robots.map((r) => r.lastDataPath),
-					// 	lastPrice
-					// );
-					// await this.timeout(this.loopTime);
-					index++;
+			const { totalDataLimit, timeType } = analysisConfig;
+			while (true) {
+				try {
+					const savedPrices = this.strToArray(
+						(await this.readFile("./database/prices.txt")) || "",
+						"\n",
+						(value) => parseFloat(value)
+					);
+					const prices = this.strToArray(
+						await this.getPrices({ limit: savedPrices.length > 0 ? 1 : totalDataLimit, timeType }),
+						"\n",
+						(value) => parseFloat(value)
+					);
+					const allPrices = [...savedPrices.slice(0, savedPrices.length - 1), ...prices];
+					for (let index = 0; index < this.robots.length; index++) {
+						const data = await this.robots[index].calculate(allPrices);
+					}
+					await this.updateTotalData(
+						this.robots.map((r) => r.lastDataPath),
+						prices[prices.length - 1]
+					);
+					await this.saveData(
+						"./database/prices.txt",
+						allPrices.slice(1, allPrices.length).reduce((pv, cv) => (pv += `${cv}\n`), "")
+					);
+					await this.timeout(this.intervalTime);
+				} catch (error) {
+					console.log(error);
+					this.robots.forEach((r) => r.logCallback("Error!"));
+					await this.timeout(this.intervalTime);
 				}
-			} catch (error) {
-				console.log(error)
-				this.robots.forEach((r) => r.logCallback("Error!"));
-				setTimeout(() => {
-					this.update();
-				}, this.loopTime);
 			}
-		} 
-		if (simulationConfig && !analysisConfig) {
-			try {
-				const prices = JSON.parse(
-					await this.getData("./database/prices.json")
+		}
+		if (!analysisConfig && simulationConfig) {
+			const { totalDataLimit, timeType, analysisLength } = simulationConfig;
+			let whileIndex = 0;
+			const savedPrices = this.strToArray((await this.readFile("./database/prices.txt")) || "", "\n", (value) =>
+				parseFloat(value)
+			);
+			let prices = [];
+			if (savedPrices.length === 0)
+				prices = this.strToArray(await this.getPrices({ limit: totalDataLimit, timeType }), "\n", (value) =>
+					parseFloat(value)
 				);
-				// let k = 0;
-				// let i = 1000;
-				// let j = 1005;
-				// const compatibles = [];
-				// for (let index = 0; index < 100; index++) {
-				// 	const res = await this.predictNextNumbers(
-				// 		prices.slice(k, i),
-				// 		5,
-				// 		5
-				// 	);
-				// 	const realData = prices.slice(i, j);
-				// 	compatibles.push(realData[4] > realData[0] === res[4] > res[0]);
-				// 	console.log("#".repeat(index) + " " + index);
-				// 	k += 1;
-				// 	i += 1;
-				// 	j += 1;
-				// }
-				// console.log("trues: " + compatibles.filter(t => t).length);
-				// console.log("falses: " + compatibles.filter(t => !t).length);
-				this.simulation({
-					prices,
-					maxSimulation: 1400,
-					windowSize: 1,
-					n: 10,
-					maxPriceUnit: 1000,
-				});
-			} catch (error) {
-				axios
-					.get(
-						`https://min-api.cryptocompare.com/data/v2/histo${config.timeType}?fsym=${this.coinName}&tsym=${this.tsym}&limit=${config.limit}&api_key=${this.apiKey}`
-					)
-					.then(async (data) => {
-						const prices = data.data.Data.Data.map((d) =>
-							d.close > d.open
-								? d.open + (d.close - d.open) / 2
-								: d.close + (d.open - d.close) / 2
+			const allPrices = [...savedPrices, ...prices];
+			while (allPrices[whileIndex + analysisLength]) {
+				try {
+					for (let index = 0; index < this.robots.length; index++) {
+						const data = await this.robots[index].calculate(
+							allPrices.slice(whileIndex, whileIndex + analysisLength)
 						);
-						try {
-							await this.saveData(
-								"./database/prices.json",
-								JSON.stringify(prices)
-							);
-						} catch (error) {
-							console.log(error);
-						}
-						this.simulation({
-							prices: prices,
-							maxSimulation: 1100,
-						});
-					})
-					.catch(() => {});
+					}
+					await this.updateTotalData(
+						this.robots.map((r) => r.lastDataPath),
+						prices[prices.length - 1]
+					);
+					await this.saveData(
+						"./database/prices.txt",
+						allPrices.slice(1, allPrices.length).reduce((pv, cv) => (pv += `${cv}\n`), "")
+					);
+				} catch (error) {
+					console.log(error);
+					this.robots.forEach((r) => r.logCallback("Error!"));
+					await this.timeout(this.intervalTime);
+				}
+				whileIndex++;
 			}
 		}
 	};
@@ -414,23 +337,24 @@ class Manager {
 	 *
 	 * @param {{analysisConfig: {maxAnalysisLength: 1000, windowSize: 1, predictPricesCount: 10}, simulationConfig: {maxAnalysisLength: 1000, windowSize: 1, predictPricesCount: 10} | null, deleteData: boolean, deletePrices: boolean}} config
 	 */
-	start = async ({analysisConfig = {maxAnalysisLength: 1000, windowSize: 1, predictPricesCount: 10}, simulationConfig = null, deleteData = false, deletePrices = true}) => {
+	start = async ({
+		analysisConfig = { totalDataLimit: 1400, timeType: "minute" },
+		simulationConfig = null,
+		deleteData = false,
+		deletePrices = true,
+	}) => {
 		if (deleteData) {
 			for (let index = 0; index < this.robots.length; index++) {
 				try {
 					await fs.rmSync(this.robots[index].lastDataPath);
 					await fs.rmSync(this.robots[index].logPath);
-				} catch (error) {
-					console.log(error);
-				}
+				} catch (error) {}
 			}
 		}
 		if (deletePrices) {
 			try {
 				await fs.rmSync(`${this.databasePath}prices.txt`);
-			} catch (error) {
-				console.log(error);
-			}
+			} catch (error) {}
 		}
 		this.robots.forEach((r, i) => {
 			r.start((log) => {
@@ -445,7 +369,7 @@ class Manager {
 				console.log("sell " + data);
 			});
 		});
-		this.update({analysisConfig, simulationConfig});
+		this.analysis({ analysisConfig, simulationConfig });
 	};
 }
 

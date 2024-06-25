@@ -1,5 +1,5 @@
-import TestScript from "./TestScript";
+import DrawPriceLines from "./DrawPriceLines";
 
-const scripts = [ TestScript ];
+const scripts = [ DrawPriceLines ];
 
 export default scripts;
