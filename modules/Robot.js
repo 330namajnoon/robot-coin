@@ -29,7 +29,7 @@ class Robot {
 		this.buyCallback?.(data);
 		return data;
 	};
-	sell = async (coin, price) => {
+	sell = (coin, price) => {
 		const data = {
 			availableCash: parseFloat((coin * price).toFixed(3)),
 			availableCriptos: 0,
@@ -84,8 +84,8 @@ class Robot {
 				availableCash: this.availableCash,
 				availableCriptos: this.availableCriptos,
 			};
-			let buyData = {};
-			let sellData = {};
+			let buyData = null;
+			let sellData = null;
 
 			if (signal.includes("buy") && availableCash > 0) {
 				buyData = this.buy(availableCash, lastPrice);
@@ -98,8 +98,8 @@ class Robot {
 				sma,
 				upperBand,
 				lowerBand,
-				buy: !!buyData?.availableCash,
-				sell: !!sellData?.availableCash,
+				buy: !!buyData,
+				sell: !!sellData,
 				date: new Date() + "",
 			};
 			await this.writeFile(this.lastDataPath, JSON.stringify(data));

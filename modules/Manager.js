@@ -119,7 +119,6 @@ class Manager {
 		for (let i = 0; i < allLastDatas.length; i++) {
 			try {
 				let data = await this.readFile(allLastDatas[i], true);
-				console.log(data);
 				total.cripto = data.availableCriptos;
 				total.cash = data.availableCash > 0 ? data.availableCash : data.availableCriptos * data.price;
 				await this.saveData("./database/total.json", JSON.stringify(total));
@@ -150,49 +149,6 @@ class Manager {
 				resolve(stdout);
 			});
 		});
-	};
-
-	simulation = async ({ prices = [100], maxSimulation, maxPriceUnit = 1000, windowSize = 5, n = 5 }) => {
-		// try {
-		// 	console.log(await this.setTerminal("clear"));
-		// 	console.log(
-		// 		"-------------------------------------------------------------------------------------------------------"
-		// 	);
-		// 	console.log(
-		// 		"| " +
-		// 			"#".repeat(Math.floor((100 / prices.length) * index)) +
-		// 			" ".repeat(
-		// 				100 - Math.floor((100 / prices.length) * index + 1)
-		// 			) +
-		// 			" | " +
-		// 			Math.floor((100 / prices.length) * (index + 1)) +
-		// 			"%"
-		// 	);
-		// 	console.log(
-		// 		"-------------------------------------------------------------------------------------------------------"
-		// 	);
-		// } catch (error) {}
-		try {
-			const maxS = maxSimulation || prices.length;
-			let guessedPrices = [];
-			for (let nni = maxPriceUnit; nni < maxS; nni++) {
-				if (nni % 5 === 0 || !guessedPrices.length)
-					guessedPrices = await this.predictNextNumbers(prices.slice(nni, maxPriceUnit + nni), windowSize, n);
-				for (let i = 0; i < this.robots.length; i++) {
-					const lastData = await this.robots[i].calculate(prices[nni], guessedPrices);
-					this.robots[i].logCallback(lastData);
-				}
-				//console.log(guessedPrices)
-				await this.updateTotalData(
-					this.robots.map((r) => r.lastDataPath),
-					prices[nni]
-				);
-				let data = await this.readFile("./database/total.json", true);
-				console.log(data);
-			}
-		} catch (error) {
-			console.log(error);
-		}
 	};
 
 	saveData = (path, data) => {
@@ -358,7 +314,7 @@ class Manager {
 		}
 		this.robots.forEach((r, i) => {
 			r.start((log) => {
-				console.log(log);
+				//console.log(log);
 			});
 
 			r.buyListener((data) => {

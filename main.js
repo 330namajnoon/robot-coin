@@ -21,20 +21,20 @@ const manager = new Manager(managerConfig);
 
 manager
 	.createRobots((robots) => {
-		console.log(robots);
+		//console.log(robots);
 	})
 	.start({
-		analysisConfig: {
-			totalDataLimit: 100,
-			timeType: "minute",
-		},
-		// analysisConfig: null,
+		// analysisConfig: {
+		// 	totalDataLimit: 100,
+		// 	timeType: "minute",
+		// },
+		analysisConfig: null,
 		simulationConfig: {
 			totalDataLimit: 1400,
 			timeType: "minute",
-			analysisLength: 100,
+			analysisLength: 300,
 		},
 		deleteData: true,
-		deletePrices: true,
+		deletePrices: false,
 	});
 
